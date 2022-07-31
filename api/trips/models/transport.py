@@ -1,7 +1,7 @@
 from django.db import models
 
 
-# Transport model.
+# Transport model
 
 class Transport(models.Model):
     DEFAULT = 'DEFAULT'
@@ -15,6 +15,8 @@ class Transport(models.Model):
     ]
     depart = models.DateTimeField(null=True)
     arrive = models.DateTimeField(null=True)
+    origin = models.CharField(max_length=120)
+    destination = models.CharField(max_length=120)
     type = models.CharField(max_length=25, choices=TRAVEL_TYPE, default=DEFAULT)
     info_link = models.URLField(null=True)
 

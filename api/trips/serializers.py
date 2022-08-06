@@ -1,18 +1,5 @@
 from rest_framework import serializers
-from .models import Trip, Destination, Accommodation, Transport, Site
-
-
-class TripSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Trip
-        fields = ['name', 'description', 'start_date', 'end_date', 'is_active', 'destinations', 'transport']
-        depth = 1
-
-
-class DestinationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Destination
-        fields = ['name', 'country', 'arrive_date', 'depart_date', 'sites', 'accommodations']
+from .models import Trip, Destination, Accommodation, Transportation, Site
 
 
 class AccommodationSerializer(serializers.ModelSerializer):
@@ -21,14 +8,35 @@ class AccommodationSerializer(serializers.ModelSerializer):
         fields = ['name', 'check_in_date', 'check_out_date', 'address_link', 'reservation_link']
 
 
-class TransportSerializer(serializers.Serializer):
-    depart = serializers.DateTimeField()
-    arrive = serializers.DateTimeField()
-    type = serializers.ChoiceField(choices=Transport.TRAVEL_TYPE, default=Transport.DEFAULT)
+class TransportationSerializer(serializers.Serializer):
+    depart_time = serializers.DateTimeField()
+    arrive_time = serializers.DateTimeField()
+    start_location = serializers.CharField()
+    end_location = serializers.CharField()
+    type = serializers.ChoiceField(choices=Transportation.TRAVEL_TYPE, default=Transportation.DEFAULT)
     info_link = serializers.URLField()
 
 
 class SiteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Site
-        fields = ['name', 'address_link', 'address_resources']
+        fields = ['name', 'address_link', 'additional_resources']
+
+
+class DestinationSerializer(serializers.ModelSerializer):
+    sites = SiteSerializer(many=True, required=False)
+    accommodations = AccommodationSerializer(many=True, required=False)
+    transportation = TransportationSerializer(many=True, required=False)
+
+    class Meta:
+        model = Destination
+        fields = ['name', 'country', 'arrive_date', 'depart_date', 'transportation', 'accommodations', 'sites']
+
+
+class TripSerializer(serializers.ModelSerializer):
+    destinations = DestinationSerializer(many=True, required=False)
+
+    class Meta:
+        model = Trip
+        fields = ['id', 'name', 'description', 'start_date', 'end_date', 'is_active', 'destinations']
+        depth = 1

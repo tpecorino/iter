@@ -19,7 +19,7 @@ from rest_framework import routers
 from trips import views
 
 router = routers.DefaultRouter()
-router.register(r'trips', views.TripView, 'todo')
+router.register(r'trips', views.TripView, 'trip')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

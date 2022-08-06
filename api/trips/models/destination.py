@@ -1,6 +1,5 @@
 from django.db import models
-from .accommodation import Accommodation
-from .site import Site
+from .trip import Trip
 
 
 # Destination model
@@ -8,10 +7,9 @@ from .site import Site
 class Destination(models.Model):
     name = models.CharField(max_length=120)
     country = models.CharField(max_length=120)
-    arrive_date = models.DateField(null=True)
-    depart_date = models.DateField(null=True)
-    sites = models.ForeignKey(Site, on_delete=models.CASCADE, blank=True, null=True)
-    accommodations = models.ForeignKey(Accommodation, on_delete=models.CASCADE, blank=True, null=True)
+    arrive_date = models.DateField(blank=True)
+    depart_date = models.DateField(blank=True)
+    trip = models.ForeignKey(Trip, related_name='destinations', on_delete=models.CASCADE, null=True)
 
     def _str_(self):
         return self.name

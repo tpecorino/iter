@@ -3,6 +3,13 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[scripts]
+start = "python manage.py runserver"
+makemigration = "python manage.py makemigrations"
+dbmigrate = "python manage.py migrate"
+dbflush = "python manage.py flush --no-input"
+#dbreset = "python manage.py flush --no-input && python manage.py loaddata"
+
 [packages]
 asgiref = "==3.5.2"
 certifi = "==2022.6.15"

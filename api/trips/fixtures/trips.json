@@ -1,0 +1,186 @@
+[
+  {
+    "model": "trips.trip",
+    "pk": 1,
+    "fields": {
+      "name": "Italy",
+      "description": "Trip to Italy",
+      "start_date": "2022-09-17",
+      "end_date": "2022-08-28",
+      "is_active": true
+    }
+  },
+  {
+    "model": "trips.trip",
+    "pk": 2,
+    "fields": {
+      "name": "Test trip",
+      "description": "This is a test trip.",
+      "start_date": "2022-08-07",
+      "end_date": "2022-08-07",
+      "is_active": false
+    }
+  },
+  {
+    "model": "trips.destination",
+    "pk": 1,
+    "fields": {
+      "name": "Rome",
+      "country": "Italy",
+      "arrive_date": "2022-09-17",
+      "depart_date": "2022-09-19",
+      "trip": 1
+    }
+  },
+  {
+    "model": "trips.destination",
+    "pk": 2,
+    "fields": {
+      "name": "Naples",
+      "country": "Italy",
+      "arrive_date": "2022-09-20",
+      "depart_date": "2022-09-21",
+      "trip": 1
+    }
+  },
+  {
+    "model": "trips.destination",
+    "pk": 3,
+    "fields": {
+      "name": "Crotone",
+      "country": "Italy",
+      "arrive_date": "2022-09-22",
+      "depart_date": "2022-09-28",
+      "trip": 1
+    }
+  },
+  {
+    "model": "trips.destination",
+    "pk": 4,
+    "fields": {
+      "name": "Test Destination",
+      "country": "Test",
+      "arrive_date": "2022-08-07",
+      "depart_date": "2022-08-07",
+      "trip": 2
+    }
+  },
+  {
+    "model": "trips.site",
+    "pk": 1,
+    "fields": {
+      "name": "Colosseum",
+      "address_link": "https://goo.gl/maps/ji923DtaaTxeuxh46",
+      "additional_resources": "Site in Rome!",
+      "destination": 1
+    }
+  },
+  {
+    "model": "trips.site",
+    "pk": 2,
+    "fields": {
+      "name": "Pompeii",
+      "address_link": "https://goo.gl/maps/xF5ZTvEh32LHBJVy6",
+      "additional_resources": "Ancient city.",
+      "destination": 2
+    }
+  },
+  {
+    "model": "trips.site",
+    "pk": 3,
+    "fields": {
+      "name": "Hadrian's Villa",
+      "address_link": "https://goo.gl/maps/X67KPFJ1SmwxXt7e9",
+      "additional_resources": "",
+      "destination": 1
+    }
+  },
+  {
+    "model": "trips.site",
+    "pk": 4,
+    "fields": {
+      "name": "Test Site",
+      "address_link": "https://www.google.com/",
+      "additional_resources": "This is a test site.",
+      "destination": 4
+    }
+  },
+  {
+    "model": "trips.accommodation",
+    "pk": 1,
+    "fields": {
+      "name": "Hotel in Rome",
+      "check_in_date": "2022-09-17T12:00:00Z",
+      "check_out_date": "2022-08-21T12:00:00Z",
+      "address_link": "https://www.google.com/",
+      "reservation_link": "https://www.google.com/",
+      "destination": 1
+    }
+  },
+  {
+    "model": "trips.accommodation",
+    "pk": 2,
+    "fields": {
+      "name": "Hotel in Naples",
+      "check_in_date": "2022-09-21T12:00:00Z",
+      "check_out_date": "2022-08-22T18:00:00Z",
+      "address_link": "https://www.google.com/",
+      "reservation_link": "https://www.google.com/",
+      "destination": 2
+    }
+  },
+  {
+    "model": "trips.accommodation",
+    "pk": 3,
+    "fields": {
+      "name": "Test accommodation",
+      "check_in_date": "2022-08-07T01:00:16Z",
+      "check_out_date": "2022-08-07T01:00:17Z",
+      "address_link": "https://www.google.com/",
+      "reservation_link": "https://www.google.com/",
+      "destination": 4
+    }
+  },
+  {
+    "model": "trips.transportation",
+    "pk": 1,
+    "fields": {
+      "initial_transport": true,
+      "depart_time": "2022-09-17T18:00:00Z",
+      "arrive_time": "2022-09-18T06:00:00Z",
+      "start_location": "New York",
+      "end_location": "Rome",
+      "type": "AIR",
+      "info_link": "https://www.google.com/",
+      "destination": 1
+    }
+  },
+  {
+    "model": "trips.transportation",
+    "pk": 2,
+    "fields": {
+      "initial_transport": false,
+      "depart_time": "2022-09-21T12:00:00Z",
+      "arrive_time": "2022-09-28T12:00:00Z",
+      "start_location": "Rome",
+      "end_location": "Crotone",
+      "type": "CAR",
+      "info_link": "https://www.google.com/",
+      "destination": 3
+    }
+  },
+  {
+    "model": "trips.transportation",
+    "pk": 3,
+    "fields": {
+      "initial_transport": false,
+      "depart_time": "2022-08-07T01:00:33Z",
+      "arrive_time": "2022-08-07T01:00:34Z",
+      "start_location": "Start test",
+      "end_location": "End test",
+      "type": "AIR",
+      "info_link": "https://www.google.com/",
+      "destination": 4
+    }
+  }
+]

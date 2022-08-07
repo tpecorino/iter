@@ -7,8 +7,8 @@ name = "pypi"
 start = "python manage.py runserver"
 makemigration = "python manage.py makemigrations"
 dbmigrate = "python manage.py migrate"
+dbseed = "python manage.py loaddata trips"
 dbflush = "python manage.py flush --no-input"
-#dbreset = "python manage.py flush --no-input && python manage.py loaddata"
 
 [packages]
 asgiref = "==3.5.2"

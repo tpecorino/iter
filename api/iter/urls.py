@@ -25,6 +25,12 @@ urlpatterns = [
     path('api/trips/<int:trip_id>/destinations/', views.DestinationList.as_view()),
     path('api/trips/<int:trip_id>/destinations/<int:destination_id>/sites/', views.SiteList.as_view()),
     path('api/sites/<int:pk>/', views.SiteDetail.as_view()),
+    path('api/trips/<int:trip_id>/destinations/<int:destination_id>/transportation/',
+         views.TransportationList.as_view()),
+    path('api/transportation/<int:pk>/', views.TransportationDetail.as_view()),
+    path('api/trips/<int:trip_id>/destinations/<int:destination_id>/accommodations/',
+         views.AccommodationList.as_view()),
+    path('api/accommodations/<int:pk>/', views.AccommodationDetail.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "bb92f1b4ae7dd9c51497d61c663e31e30ebf074fc3a18c3c560cb0976f22c622"
+            "sha256": "6ed874c019f524e7387ba019cfe9647267ce5092024e98decab97bd8cf16dbaf"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -80,22 +80,6 @@
             "index": "pypi",
             "version": "==3.7.1"
         },
-        "pip": {
-            "hashes": [
-                "sha256:0bbbc87dfbe6eed217beff0021f8b7dea04c8f4a0baa9d31dc4cff281ffc5b2b",
-                "sha256:50516e47a2b79e77446f0d05649f0d53772c192571486236b1905492bfc24bac"
-            ],
-            "markers": "python_version >= '3.7'",
-            "version": "==22.2.1"
-        },
-        "pipenv": {
-            "hashes": [
-                "sha256:374e63450220d7abb298cbaee06c4b02274e6f1cb2ce7b7b677fd5fd3dd30841",
-                "sha256:79d7cf8709b0c165ed3f136acc8ca4ff9771ee32117117cc21969e39911becf8"
-            ],
-            "index": "pypi",
-            "version": "==2022.7.24"
-        },
         "platformdirs": {
             "hashes": [
                 "sha256:027d8e83a2d7de06bbac4e5ef7e023c02b863d7ea5d079477e722bb41ab25788",
@@ -129,14 +113,6 @@
             "index": "pypi",
             "version": "==2022.1"
         },
-        "setuptools": {
-            "hashes": [
-                "sha256:0d33c374d41c7863419fc8f6c10bfe25b7b498aa34164d135c622e52580c6b16",
-                "sha256:c04b44a57a6265fe34a4a444e965884716d34bae963119a76353434d6f18e450"
-            ],
-            "markers": "python_version >= '3.7'",
-            "version": "==63.2.0"
-        },
         "sqlparse": {
             "hashes": [
                 "sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae",
@@ -152,22 +128,6 @@
             ],
             "index": "pypi",
             "version": "==2022.1"
-        },
-        "virtualenv": {
-            "hashes": [
-                "sha256:0ef5be6d07181946891f5abc8047fda8bc2f0b4b9bf222c64e6e8963baee76db",
-                "sha256:635b272a8e2f77cb051946f46c60a54ace3cb5e25568228bd6b57fc70eca9ff3"
-            ],
-            "index": "pypi",
-            "version": "==20.16.2"
-        },
-        "virtualenv-clone": {
-            "hashes": [
-                "sha256:418ee935c36152f8f153c79824bb93eaf6f0f7984bae31d3f48f350b9183501a",
-                "sha256:44d5263bceed0bac3e1424d64f798095233b64def1c5689afa43dc3223caf5b0"
-            ],
-            "index": "pypi",
-            "version": "==0.5.7"
         }
     },
     "develop": {}

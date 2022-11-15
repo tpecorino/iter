@@ -72,6 +72,7 @@
       "name": "Colosseum",
       "address_link": "https://goo.gl/maps/ji923DtaaTxeuxh46",
       "additional_resources": "Site in Rome!",
+      "time": null,
       "destination": 1
     }
   },
@@ -82,6 +83,7 @@
       "name": "Pompeii",
       "address_link": "https://goo.gl/maps/xF5ZTvEh32LHBJVy6",
       "additional_resources": "Ancient city.",
+      "time": null,
       "destination": 2
     }
   },
@@ -92,6 +94,7 @@
       "name": "Hadrian's Villa",
       "address_link": "https://goo.gl/maps/X67KPFJ1SmwxXt7e9",
       "additional_resources": "",
+      "time": null,
       "destination": 1
     }
   },
@@ -102,6 +105,7 @@
       "name": "Test Site",
       "address_link": "https://www.google.com/",
       "additional_resources": "This is a test site.",
+      "time": null,
       "destination": 4
     }
   },
